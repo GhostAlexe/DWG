@@ -1,0 +1,26 @@
+[Unit]
+Description=DWG's distributed currency daemon
+After=network.target
+
+[Service]
+User=dwe
+Group=dwe
+
+Type=forking
+PIDFile=/var/lib/dwed/dwed.pid
+
+ExecStart=/usr/bin/dwed -daemon -pid=/var/lib/dwed/dwed.pid \
+          -conf=/etc/dwe/dwe.conf -datadir=/var/lib/dwed
+
+ExecStop=-/usr/bin/dwe-cli -conf=/etc/dwe/dwe.conf \
+         -datadir=/var/lib/dwed stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

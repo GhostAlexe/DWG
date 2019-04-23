@@ -86,7 +86,7 @@ WalletView::WalletView(QWidget* parent) : QStackedWidget(parent),
     QSettings settings;
     if (settings.value("fShowMasternodesTab").toBool()) {
         masternodeListPage = new MasternodeList();
-        addWidget(masternodeListPage);
+//        addWidget(masternodeListPage);
     }
 
     // Clicking on a transaction on the overview pre-selects the transaction on the transaction history page

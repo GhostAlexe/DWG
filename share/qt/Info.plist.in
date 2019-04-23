@@ -29,7 +29,7 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>DWE-Qt</string>
+  <string>DWG-Qt</string>
 
   <key>CFBundleIdentifier</key>
   <string>io.dwe.Dwe-Qt</string>

@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2016 The Dash developers
-// Copyright (c) 2015-2017 The DWE developers
+// Copyright (c) 2015-2017 The DWG developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,7 +12,7 @@
 #include "spork.h"
 
 //
-// Bootup the Masternode, look for a 10000 DWE input and register on the network
+// Bootup the Masternode, look for a 10000 DWG input and register on the network
 //
 void CActiveMasternode::ManageStatus()
 {
@@ -68,13 +68,13 @@ void CActiveMasternode::ManageStatus()
         }
 
         if (Params().NetworkID() == CBaseChainParams::MAIN) {
-            if (service.GetPort() != 30808) {
-                notCapableReason = strprintf("Invalid port: %u - only 30808 is supported on mainnet.", service.GetPort());
+            if (service.GetPort() != 20144) {
+                notCapableReason = strprintf("Invalid port: %u - only 20144 is supported on mainnet.", service.GetPort());
                 LogPrintf("CActiveMasternode::ManageStatus() - not capable: %s\n", notCapableReason);
                 return;
             }
-        } else if (service.GetPort() == 30808) {
-            notCapableReason = strprintf("Invalid port: %u - 30808 is only supported on mainnet.", service.GetPort());
+        } else if (service.GetPort() == 20144) {
+            notCapableReason = strprintf("Invalid port: %u - 20144 is only supported on mainnet.", service.GetPort());
             LogPrintf("CActiveMasternode::ManageStatus() - not capable: %s\n", notCapableReason);
             return;
         }
@@ -267,13 +267,13 @@ bool CActiveMasternode::Register(std::string strService, std::string strKeyMaste
 
     CService service = CService(strService);
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
-        if (service.GetPort() != 30808) {
-            errorMessage = strprintf("Invalid port %u for masternode %s - only 30808 is supported on mainnet.", service.GetPort(), strService);
+        if (service.GetPort() != 20144) {
+            errorMessage = strprintf("Invalid port %u for masternode %s - only 20144 is supported on mainnet.", service.GetPort(), strService);
             LogPrintf("CActiveMasternode::Register() - %s\n", errorMessage);
             return false;
         }
-    } else if (service.GetPort() == 30808) {
-        errorMessage = strprintf("Invalid port %u for masternode %s - 30808 is only supported on mainnet.", service.GetPort(), strService);
+    } else if (service.GetPort() == 20144) {
+        errorMessage = strprintf("Invalid port %u for masternode %s - 20144 is only supported on mainnet.", service.GetPort(), strService);
         LogPrintf("CActiveMasternode::Register() - %s\n", errorMessage);
         return false;
     }

@@ -1,8 +1,8 @@
-// Copyright (c) 2018 The DWE developers
+// Copyright (c) 2018 The DWG developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef DWE_ACCUMULATORMAP_H
-#define DWE_ACCUMULATORMAP_H
+#ifndef DWG_ACCUMULATORMAP_H
+#define DWG_ACCUMULATORMAP_H
 
 #include "libzerocoin/Accumulator.h"
 #include "libzerocoin/Coin.h"
@@ -20,4 +20,4 @@ public:
     uint256 GetCheckpoint();
     void Reset();
 };
-#endif //DWE_ACCUMULATORMAP_H
+#endif //DWG_ACCUMULATORMAP_H

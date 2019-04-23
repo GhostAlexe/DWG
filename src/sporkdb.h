@@ -1,9 +1,9 @@
-// Copyright (c) 2018 The DWE developers
+// Copyright (c) 2018 The DWG developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef DWE_CSPORKDB_H
-#define DWE_CSPORKDB_H
+#ifndef DWG_CSPORKDB_H
+#define DWG_CSPORKDB_H
 
 #include <boost/filesystem/path.hpp>
 #include "leveldbwrapper.h"
@@ -25,4 +25,4 @@ public:
 };
 
 
-#endif //DWE_CSPORKDB_H
+#endif //DWG_CSPORKDB_H

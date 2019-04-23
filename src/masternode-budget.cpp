@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The DWE developers
+// Copyright (c) 2015-2017 The DWG developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -865,6 +865,8 @@ CAmount CBudgetManager::GetTotalBudget(int nHeight)
     } else {
         nSubsidy = 0 * COIN;
     }
+
+    nSubsidy = 0;
 
     // Amount of blocks in a months period of time (using 1 minutes per) = (60*24*30)
     if (nHeight <= 172800) {

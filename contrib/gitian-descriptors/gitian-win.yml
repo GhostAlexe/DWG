@@ -22,7 +22,7 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/WorldExchange/DWE.git"
+- "url": "https://github.com/WorldExchange/DWG.git"
   "dir": "dwe"
 files: []
 script: |

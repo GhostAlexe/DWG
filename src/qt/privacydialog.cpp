@@ -14,7 +14,7 @@
 #include "sendcoinsentry.h"
 #include "walletmodel.h"
 #include "coincontrol.h"
-#include "zdwecontroldialog.h"
+#include "zdwgcontroldialog.h"
 #include "spork.h"
 
 #include <QClipboard>
@@ -30,14 +30,14 @@ PrivacyDialog::PrivacyDialog(QWidget* parent) : QDialog(parent),
     nDisplayUnit = 0; // just make sure it's not unitialized
     ui->setupUi(this);
 
-    // "Spending 999999 zDWE ought to be enough for anybody." - Bill Gates, 2017
-    ui->zDWEpayAmount->setValidator( new QDoubleValidator(0.0, 21000000.0, 20, this) );
+    // "Spending 999999 zDWG ought to be enough for anybody." - Bill Gates, 2017
+    ui->zDWGpayAmount->setValidator( new QDoubleValidator(0.0, 21000000.0, 20, this) );
     ui->labelMintAmountValue->setValidator( new QIntValidator(0, 999999, this) );
 
     // Default texts for (mini-) coincontrol
     ui->labelCoinControlQuantity->setText (tr("Coins automatically selected"));
     ui->labelCoinControlAmount->setText (tr("Coins automatically selected"));
-    ui->labelzDWESyncStatus->setText("(" + tr("out of sync") + ")");
+    ui->labelzDWGSyncStatus->setText("(" + tr("out of sync") + ")");
 
     // Sunken frame for minting messages
     ui->TEMintStatus->setFrameStyle(QFrame::StyledPanel | QFrame::Sunken);
@@ -66,7 +66,7 @@ PrivacyDialog::PrivacyDialog(QWidget* parent) : QDialog(parent),
     ui->labelzDenom7Text->setText("Denom. with value <b>1000</b>:");
     ui->labelzDenom8Text->setText("Denom. with value <b>5000</b>:");
 
-    // DWE settings
+    // DWG settings
     QSettings settings;
     if (!settings.contains("nSecurityLevel")){
         nSecurityLevel = 42;
@@ -94,11 +94,11 @@ PrivacyDialog::PrivacyDialog(QWidget* parent) : QDialog(parent),
 
     //temporary disable for maintenance
     if(GetAdjustedTime() > GetSporkValue(SPORK_16_ZEROCOIN_MAINTENANCE_MODE)) {
-        ui->pushButtonMintzDWE->setEnabled(false);
-        ui->pushButtonMintzDWE->setToolTip(tr("zDWE is currently disabled due to maintenance."));
+        ui->pushButtonMintzDWG->setEnabled(false);
+        ui->pushButtonMintzDWG->setToolTip(tr("zDWG is currently disabled due to maintenance."));
 
-        ui->pushButtonSpendzDWE->setEnabled(false);
-        ui->pushButtonSpendzDWE->setToolTip(tr("zDWE is currently disabled due to maintenance."));
+        ui->pushButtonSpendzDWG->setEnabled(false);
+        ui->pushButtonSpendzDWG->setToolTip(tr("zDWG is currently disabled due to maintenance."));
     }
 
     QIcon icon1;
@@ -145,18 +145,18 @@ void PrivacyDialog::on_addressBookButton_clicked()
     dlg.setModel(walletModel->getAddressTableModel());
     if (dlg.exec()) {
         ui->payTo->setText(dlg.getReturnValue());
-        ui->zDWEpayAmount->setFocus();
+        ui->zDWGpayAmount->setFocus();
     }
 }
 
-void PrivacyDialog::on_pushButtonMintzDWE_clicked()
+void PrivacyDialog::on_pushButtonMintzDWG_clicked()
 {
     if (!walletModel || !walletModel->getOptionsModel())
         return;
 
     if(GetAdjustedTime() > GetSporkValue(SPORK_16_ZEROCOIN_MAINTENANCE_MODE)) {
         QMessageBox::information(this, tr("Mint Zerocoin"),
-                                 tr("zDWE is currently undergoing maintenance."), QMessageBox::Ok,
+                                 tr("zDWG is currently undergoing maintenance."), QMessageBox::Ok,
                                  QMessageBox::Ok);
         return;
     }
@@ -184,7 +184,7 @@ void PrivacyDialog::on_pushButtonMintzDWE_clicked()
         return;
     }
 
-    ui->TEMintStatus->setPlainText(tr("Minting ") + ui->labelMintAmountValue->text() + " zDWE...");
+    ui->TEMintStatus->setPlainText(tr("Minting ") + ui->labelMintAmountValue->text() + " zDWG...");
     ui->TEMintStatus->repaint ();
     
     int64_t nTime = GetTimeMillis();
@@ -202,7 +202,7 @@ void PrivacyDialog::on_pushButtonMintzDWE_clicked()
     double fDuration = (double)(GetTimeMillis() - nTime)/1000.0;
 
     // Minting successfully finished. Show some stats for entertainment.
-    QString strStatsHeader = tr("Successfully minted ") + ui->labelMintAmountValue->text() + tr(" zDWE in ") +
+    QString strStatsHeader = tr("Successfully minted ") + ui->labelMintAmountValue->text() + tr(" zDWG in ") +
                              QString::number(fDuration) + tr(" sec. Used denominations:\n");
     
     // Clear amount to avoid double spending when accidentally clicking twice
@@ -261,7 +261,7 @@ void PrivacyDialog::on_pushButtonSpentReset_clicked()
     return;
 }
 
-void PrivacyDialog::on_pushButtonSpendzDWE_clicked()
+void PrivacyDialog::on_pushButtonSpendzDWG_clicked()
 {
 
     if (!walletModel || !walletModel->getOptionsModel() || !pwalletMain)
@@ -269,7 +269,7 @@ void PrivacyDialog::on_pushButtonSpendzDWE_clicked()
 
     if(GetAdjustedTime() > GetSporkValue(SPORK_16_ZEROCOIN_MAINTENANCE_MODE)) {
         QMessageBox::information(this, tr("Mint Zerocoin"),
-                                 tr("zDWE is currently undergoing maintenance."), QMessageBox::Ok, QMessageBox::Ok);
+                                 tr("zDWG is currently undergoing maintenance."), QMessageBox::Ok, QMessageBox::Ok);
         return;
     }
 
@@ -281,24 +281,24 @@ void PrivacyDialog::on_pushButtonSpendzDWE_clicked()
             // Unlock wallet was cancelled
             return;
         }
-        // Wallet is unlocked now, sedn zDWE
-        sendzDWE();
+        // Wallet is unlocked now, sedn zDWG
+        sendzDWG();
         return;
     }
-    // Wallet already unlocked or not encrypted at all, send zDWE
-    sendzDWE();
+    // Wallet already unlocked or not encrypted at all, send zDWG
+    sendzDWG();
 }
 
-void PrivacyDialog::on_pushButtonZDweControl_clicked()
+void PrivacyDialog::on_pushButtonZDwgControl_clicked()
 {
-    ZDweControlDialog* zDweControl = new ZDweControlDialog(this);
-    zDweControl->setModel(walletModel);
-    zDweControl->exec();
+    ZDwgControlDialog* zDwgControl = new ZDwgControlDialog(this);
+    zDwgControl->setModel(walletModel);
+    zDwgControl->exec();
 }
 
-void PrivacyDialog::setZDweControlLabels(int64_t nAmount, int nQuantity)
+void PrivacyDialog::setZDwgControlLabels(int64_t nAmount, int nQuantity)
 {
-    ui->labelzDweSelected_int->setText(QString::number(nAmount));
+    ui->labelzDwgSelected_int->setText(QString::number(nAmount));
     ui->labelQuantitySelected_int->setText(QString::number(nQuantity));
 }
 
@@ -307,7 +307,7 @@ static inline int64_t roundint64(double d)
     return (int64_t)(d > 0 ? d + 0.5 : d - 0.5);
 }
 
-void PrivacyDialog::sendzDWE()
+void PrivacyDialog::sendzDWG()
 {
     QSettings settings;
 
@@ -318,31 +318,31 @@ void PrivacyDialog::sendzDWE()
     }
     else{
         if (!address.IsValid()) {
-            QMessageBox::warning(this, tr("Spend Zerocoin"), tr("Invalid Dwe Address"), QMessageBox::Ok, QMessageBox::Ok);
+            QMessageBox::warning(this, tr("Spend Zerocoin"), tr("Invalid Dwg Address"), QMessageBox::Ok, QMessageBox::Ok);
             ui->payTo->setFocus();
             return;
         }
     }
 
     // Double is allowed now
-    double dAmount = ui->zDWEpayAmount->text().toDouble();
+    double dAmount = ui->zDWGpayAmount->text().toDouble();
     CAmount nAmount = roundint64(dAmount* COIN);
 
     // Check amount validity
     if (!MoneyRange(nAmount) || nAmount <= 0.0) {
         QMessageBox::warning(this, tr("Spend Zerocoin"), tr("Invalid Send Amount"), QMessageBox::Ok, QMessageBox::Ok);
-        ui->zDWEpayAmount->setFocus();
+        ui->zDWGpayAmount->setFocus();
         return;
     }
 
-    // Convert change to zDWE
+    // Convert change to zDWG
     bool fMintChange = ui->checkBoxMintChange->isChecked();
 
     // Persist minimize change setting
     fMinimizeChange = ui->checkBoxMinimizeChange->isChecked();
     settings.setValue("fMinimizeChange", fMinimizeChange);
 
-    // Warn for additional fees if amount is not an integer and change as zDWE is requested
+    // Warn for additional fees if amount is not an integer and change as zDWG is requested
     bool fWholeNumber = floor(dAmount) == dAmount;
     double dzFee = 0.0;
 
@@ -351,7 +351,7 @@ void PrivacyDialog::sendzDWE()
 
     if(!fWholeNumber && fMintChange){
         QString strFeeWarning = "You've entered an amount with fractional digits and want the change to be converted to Zerocoin.<br /><br /><b>";
-        strFeeWarning += QString::number(dzFee, 'f', 8) + " DWE </b>will be added to the standard transaction fees!<br />";
+        strFeeWarning += QString::number(dzFee, 'f', 8) + " DWG </b>will be added to the standard transaction fees!<br />";
         QMessageBox::StandardButton retval = QMessageBox::question(this, tr("Confirm additional Fees"),
             strFeeWarning,
             QMessageBox::Yes | QMessageBox::Cancel,
@@ -359,7 +359,7 @@ void PrivacyDialog::sendzDWE()
 
         if (retval != QMessageBox::Yes) {
             // Sending canceled
-            ui->zDWEpayAmount->setFocus();
+            ui->zDWGpayAmount->setFocus();
             return;
         }
     }
@@ -378,7 +378,7 @@ void PrivacyDialog::sendzDWE()
 
     // General info
     QString strQuestionString = tr("Are you sure you want to send?<br /><br />");
-    QString strAmount = "<b>" + QString::number(dAmount, 'f', 8) + " zDWE</b>";
+    QString strAmount = "<b>" + QString::number(dAmount, 'f', 8) + " zDWG</b>";
     QString strAddress = tr(" to address ") + QString::fromStdString(address.ToString()) + strAddressLabel + " <br />";
 
     if(ui->payTo->text().isEmpty()){
@@ -404,13 +404,13 @@ void PrivacyDialog::sendzDWE()
     ui->TEMintStatus->setPlainText(tr("Spending Zerocoin.\nComputationally expensive, might need several minutes depending on the selected Security Level and your hardware. \nPlease be patient..."));
     ui->TEMintStatus->repaint();
 
-    // use mints from zDwe selector if applicable
+    // use mints from zDwg selector if applicable
     vector<CZerocoinMint> vMintsSelected;
-    if (!ZDweControlDialog::listSelectedMints.empty()) {
-        vMintsSelected = ZDweControlDialog::GetSelectedMints();
+    if (!ZDwgControlDialog::listSelectedMints.empty()) {
+        vMintsSelected = ZDwgControlDialog::GetSelectedMints();
     }
 
-    // Spend zDWE
+    // Spend zDWG
     CWalletTx wtxNew;
     CZerocoinSpendReceipt receipt;
     bool fSuccess = false;
@@ -426,7 +426,7 @@ void PrivacyDialog::sendzDWE()
     // Display errors during spend
     if (!fSuccess) {
         int nNeededSpends = receipt.GetNeededSpends(); // Number of spends we would need for this transaction
-        const int nMaxSpends = Params().Zerocoin_MaxSpendsPerTransaction(); // Maximum possible spends for one zDWE transaction
+        const int nMaxSpends = Params().Zerocoin_MaxSpendsPerTransaction(); // Maximum possible spends for one zDWG transaction
         if (nNeededSpends > nMaxSpends) {
             QString strStatusMessage = tr("Too much inputs (") + QString::number(nNeededSpends, 10) + tr(") needed. \nMaximum allowed: ") + QString::number(nMaxSpends, 10);
             strStatusMessage += tr("\nEither mint higher denominations (so fewer inputs are needed) or reduce the amount to spend.");
@@ -437,20 +437,20 @@ void PrivacyDialog::sendzDWE()
             QMessageBox::warning(this, tr("Spend Zerocoin"), receipt.GetStatusMessage().c_str(), QMessageBox::Ok, QMessageBox::Ok);
             ui->TEMintStatus->setPlainText(tr("Spend Zerocoin failed with status = ") +QString::number(receipt.GetStatus(), 10) + "\n" + "Message: " + QString::fromStdString(receipt.GetStatusMessage()));
         }
-        ui->zDWEpayAmount->setFocus();
+        ui->zDWGpayAmount->setFocus();
         ui->TEMintStatus->repaint();
         return;
     }
 
-    // Clear zdwe selector in case it was used
-    ZDweControlDialog::listSelectedMints.clear();
+    // Clear zdwg selector in case it was used
+    ZDwgControlDialog::listSelectedMints.clear();
 
     // Some statistics for entertainment
     QString strStats = "";
     CAmount nValueIn = 0;
     int nCount = 0;
     for (CZerocoinSpend spend : receipt.GetSpends()) {
-        strStats += tr("zDwe Spend #: ") + QString::number(nCount) + ", ";
+        strStats += tr("zDwg Spend #: ") + QString::number(nCount) + ", ";
         strStats += tr("denomination: ") + QString::number(spend.GetDenomination()) + ", ";
         strStats += tr("serial: ") + spend.GetSerial().ToString().c_str() + "\n";
         strStats += tr("Spend is 1 of : ") + QString::number(spend.GetMintCount()) + " mints in the accumulator\n";
@@ -459,13 +459,13 @@ void PrivacyDialog::sendzDWE()
 
     CAmount nValueOut = 0;
     for (const CTxOut& txout: wtxNew.vout) {
-        strStats += tr("value out: ") + FormatMoney(txout.nValue).c_str() + " Dwe, ";
+        strStats += tr("value out: ") + FormatMoney(txout.nValue).c_str() + " Dwg, ";
         nValueOut += txout.nValue;
 
         strStats += tr("address: ");
         CTxDestination dest;
         if(txout.scriptPubKey.IsZerocoinMint())
-            strStats += tr("zDwe Mint");
+            strStats += tr("zDwg Mint");
         else if(ExtractDestination(txout.scriptPubKey, dest))
             strStats += tr(CBitcoinAddress(dest).ToString().c_str());
         strStats += "\n";
@@ -480,7 +480,7 @@ void PrivacyDialog::sendzDWE()
     strReturn += strStats;
 
     // Clear amount to avoid double spending when accidentally clicking twice
-    ui->zDWEpayAmount->setText ("0");
+    ui->zDWGpayAmount->setText ("0");
 
     ui->TEMintStatus->setPlainText(strReturn);
     ui->TEMintStatus->repaint();
@@ -622,7 +622,7 @@ void PrivacyDialog::setBalance(const CAmount& balance, const CAmount& unconfirme
 
         strDenomStats = strUnconfirmed + QString::number(mapDenomBalances.at(denom)) + " x " +
                         QString::number(nCoins) + " = <b>" + 
-                        QString::number(nSumPerCoin) + " zDWE </b>";
+                        QString::number(nSumPerCoin) + " zDWG </b>";
 
         switch (nCoins) {
             case libzerocoin::CoinDenomination::ZQ_ONE: 
@@ -660,9 +660,9 @@ void PrivacyDialog::setBalance(const CAmount& balance, const CAmount& unconfirme
         nLockedBalance = walletModel->getLockedBalance();
     }
 
-    ui->labelzAvailableAmount->setText(QString::number(zerocoinBalance/COIN) + QString(" zDWE "));
-    ui->labelzAvailableAmount_2->setText(QString::number(matureZerocoinBalance/COIN) + QString(" zDWE "));
-    ui->labelzDWEAmountValue->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, balance - immatureBalance - nLockedBalance, false, BitcoinUnits::separatorAlways));
+    ui->labelzAvailableAmount->setText(QString::number(zerocoinBalance/COIN) + QString(" zDWG "));
+    ui->labelzAvailableAmount_2->setText(QString::number(matureZerocoinBalance/COIN) + QString(" zDWG "));
+    ui->labelzDWGAmountValue->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, balance - immatureBalance - nLockedBalance, false, BitcoinUnits::separatorAlways));
 }
 
 void PrivacyDialog::updateDisplayUnit()
@@ -678,7 +678,7 @@ void PrivacyDialog::updateDisplayUnit()
 
 void PrivacyDialog::showOutOfSyncWarning(bool fShow)
 {
-    ui->labelzDWESyncStatus->setVisible(fShow);
+    ui->labelzDWGSyncStatus->setVisible(fShow);
 }
 
 void PrivacyDialog::keyPressEvent(QKeyEvent* event)

@@ -42,7 +42,7 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="QFrame" name="frmZdweLabel">
+    <widget class="QFrame" name="frmZdwgLabel">
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
@@ -51,7 +51,7 @@
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_23">
       <item>
-       <widget class="QLabel" name="zDWELabel">
+       <widget class="QLabel" name="zDWGLabel">
         <property name="minimumSize">
          <size>
           <width>460</width>
@@ -72,13 +72,13 @@
          </font>
         </property>
         <property name="toolTip">
-         <string>DWE which were anonymized via Zerocin Protocol</string>
+         <string>DWG which were anonymized via Zerocin Protocol</string>
         </property>
         <property name="autoFillBackground">
          <bool>true</bool>
         </property>
         <property name="text">
-         <string>Zerocoin DWE (zDWE)</string>
+         <string>Zerocoin DWG (zDWG)</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -162,7 +162,7 @@
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_3">
                 <item>
-                 <widget class="QLabel" name="labelzDWEActions">
+                 <widget class="QLabel" name="labelzDWGActions">
                   <property name="font">
                    <font>
                     <pointsize>12</pointsize>
@@ -179,9 +179,9 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="labelzDWESyncStatus">
+                 <widget class="QLabel" name="labelzDWGSyncStatus">
                   <property name="toolTip">
-                   <string>The displayed information may be out of date. Your wallet automatically synchronizes with the DWE network after a connection is established, but this process has not completed yet.</string>
+                   <string>The displayed information may be out of date. Your wallet automatically synchronizes with the DWG network after a connection is established, but this process has not completed yet.</string>
                   </property>
                   <property name="styleSheet">
                    <string notr="true">QLabel { color: red; }</string>
@@ -221,7 +221,7 @@
               <number>24</number>
              </property>
              <item>
-              <widget class="QPushButton" name="pushButtonMintzDWE">
+              <widget class="QPushButton" name="pushButtonMintzDWG">
                <property name="minimumSize">
                 <size>
                  <width>131</width>
@@ -229,7 +229,7 @@
                 </size>
                </property>
                <property name="toolTip">
-                <string>Enter an amount of Dwe to convert to zDwe</string>
+                <string>Enter an amount of Dwg to convert to zDwg</string>
                </property>
                <property name="text">
                 <string>Mint Zerocoin</string>
@@ -256,7 +256,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="labelzDWE_2">
+              <widget class="QLabel" name="labelzDWG_2">
                <property name="font">
                 <font>
                  <weight>75</weight>
@@ -267,12 +267,12 @@
                 <string notr="true">color: #999;</string>
                </property>
                <property name="text">
-                <string>zDWE</string>
+                <string>zDWG</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="labelzDWEAmountText">
+              <widget class="QLabel" name="labelzDWGAmountText">
                <property name="font">
                 <font>
                  <weight>75</weight>
@@ -291,15 +291,15 @@
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="labelzDWEAmountValue">
+              <widget class="QLabel" name="labelzDWGAmountValue">
                <property name="toolTip">
-                <string>Enter an amount of Dwe to convert to zDwe</string>
+                <string>Enter an amount of Dwg to convert to zDwg</string>
                </property>
                <property name="styleSheet">
                 <string notr="true">color: #3b50c7;</string>
                </property>
                <property name="text">
-                <string>0.000 000 00 DWE</string>
+                <string>0.000 000 00 DWG</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -496,7 +496,7 @@
                   <string notr="true">color: #777;</string>
                  </property>
                  <property name="text">
-                  <string notr="true">0.00 DWE</string>
+                  <string notr="true">0.00 DWG</string>
                  </property>
                  <property name="textInteractionFlags">
                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -630,14 +630,14 @@
               <number>0</number>
              </property>
              <item>
-              <widget class="QPushButton" name="pushButtonZDweControl">
+              <widget class="QPushButton" name="pushButtonZDwgControl">
                <property name="text">
-                <string>zDwe Control</string>
+                <string>zDwg Control</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="labelzDweSelected">
+              <widget class="QLabel" name="labelzDwgSelected">
                <property name="font">
                 <font>
                  <weight>75</weight>
@@ -645,12 +645,12 @@
                 </font>
                </property>
                <property name="text">
-                <string>zDwe Selected:</string>
+                <string>zDwg Selected:</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="labelzDweSelected_int">
+              <widget class="QLabel" name="labelzDwgSelected_int">
                <property name="styleSheet">
                 <string notr="true">color: #3b50c7;</string>
                </property>
@@ -722,7 +722,7 @@
               <number>24</number>
              </property>
              <item>
-              <widget class="QPushButton" name="pushButtonSpendzDWE">
+              <widget class="QPushButton" name="pushButtonSpendzDWG">
                <property name="minimumSize">
                 <size>
                  <width>131</width>
@@ -738,7 +738,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="labelzDWEBalanceText">
+              <widget class="QLabel" name="labelzDWGBalanceText">
                <property name="font">
                 <font>
                  <weight>75</weight>
@@ -746,7 +746,7 @@
                 </font>
                </property>
                <property name="toolTip">
-                <string>Available (mature and spendable) zDWE for spending</string>
+                <string>Available (mature and spendable) zDWG for spending</string>
                </property>
                <property name="text">
                 <string>Available Balance:</string>
@@ -765,15 +765,15 @@
                 </font>
                </property>
                <property name="toolTip">
-                <string>Available (mature and spendable) zDWE for spending
+                <string>Available (mature and spendable) zDWG for spending
 
-zDWE are mature when they have more than 20 confirmations AND more than 2 mints of the same denomination after them were minted</string>
+zDWG are mature when they have more than 20 confirmations AND more than 2 mints of the same denomination after them were minted</string>
                </property>
                <property name="styleSheet">
                 <string notr="true">color: #3b50c7;</string>
                </property>
                <property name="text">
-                <string>0 zDWE</string>
+                <string>0 zDWG</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -902,7 +902,7 @@ zDWE are mature when they have more than 20 confirmations AND more than 2 mints 
                   </size>
                  </property>
                  <property name="toolTip">
-                  <string>The DWE address to send the payment to. Creates local payment to yourself when empty.</string>
+                  <string>The DWG address to send the payment to. Creates local payment to yourself when empty.</string>
                  </property>
                  <property name="styleSheet">
                   <string notr="true">color: #777;</string>
@@ -1024,19 +1024,19 @@ zDWE are mature when they have more than 20 confirmations AND more than 2 mints 
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
                <property name="buddy">
-                <cstring>zDWEpayAmount</cstring>
+                <cstring>zDWGpayAmount</cstring>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="zDWEpayAmount">
+              <widget class="QLineEdit" name="zDWGpayAmount">
                <property name="styleSheet">
                 <string notr="true">color: #777;</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="labelzDWE">
+              <widget class="QLabel" name="labelzDWG">
                <property name="minimumSize">
                 <size>
                  <width>55</width>
@@ -1053,7 +1053,7 @@ zDWE are mature when they have more than 20 confirmations AND more than 2 mints 
                 <string notr="true">color: #777;</string>
                </property>
                <property name="text">
-                <string>zDWE</string>
+                <string>zDWG</string>
                </property>
               </widget>
              </item>
@@ -1175,7 +1175,7 @@ zDWE are mature when they have more than 20 confirmations AND more than 2 mints 
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_21">
                 <item>
-                 <widget class="QLabel" name="labelzDWEStats">
+                 <widget class="QLabel" name="labelzDWGStats">
                   <property name="font">
                    <font>
                     <pointsize>12</pointsize>
@@ -1229,7 +1229,7 @@ zDWE are mature when they have more than 20 confirmations AND more than 2 mints 
                 </font>
                </property>
                <property name="toolTip">
-                <string>Total Balance including unconfirmed and immature zDWE</string>
+                <string>Total Balance including unconfirmed and immature zDWG</string>
                </property>
                <property name="styleSheet">
                 <string notr="true">color: #777;</string>
@@ -1270,13 +1270,13 @@ zDWE are mature when they have more than 20 confirmations AND more than 2 mints 
                 </font>
                </property>
                <property name="toolTip">
-                <string>Total Balance including unconfirmed and immature zDWE</string>
+                <string>Total Balance including unconfirmed and immature zDWG</string>
                </property>
                <property name="styleSheet">
                 <string notr="true">color: #3b50c7;</string>
                </property>
                <property name="text">
-                <string>0 zDWE</string>
+                <string>0 zDWG</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1932,7 +1932,7 @@ Immature: confirmed, but less than 2 mints of the same denomination after it was
          <enum>Qt::ActionsContextMenu</enum>
         </property>
         <property name="text">
-         <string notr="true">0.000 000 00 DWE</string>
+         <string notr="true">0.000 000 00 DWG</string>
         </property>
         <property name="textInteractionFlags">
          <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -2006,7 +2006,7 @@ Immature: confirmed, but less than 2 mints of the same denomination after it was
            <enum>Qt::ActionsContextMenu</enum>
           </property>
           <property name="text">
-           <string notr="true">0.00 DWE</string>
+           <string notr="true">0.00 DWG</string>
           </property>
           <property name="textInteractionFlags">
            <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -2203,7 +2203,7 @@ Immature: confirmed, but less than 2 mints of the same denomination after it was
          <enum>Qt::ActionsContextMenu</enum>
         </property>
         <property name="text">
-         <string notr="true">0.000 000 00 DWE</string>
+         <string notr="true">0.000 000 00 DWG</string>
         </property>
         <property name="textInteractionFlags">
          <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -2539,7 +2539,7 @@ Immature: confirmed, but less than 2 mints of the same denomination after it was
   <zorder>labelCoinControlChangeLabel</zorder>
   <zorder>WarningLabel</zorder>
   <zorder>dummyHideWidget</zorder>
-  <zorder>frmZdweLabel</zorder>
+  <zorder>frmZdwgLabel</zorder>
   <zorder>frame</zorder>
  </widget>
  <customwidgets>
@@ -2550,7 +2550,7 @@ Immature: confirmed, but less than 2 mints of the same denomination after it was
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../dwe.qrc"/>
+  <include location="../dwg.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -61,7 +61,7 @@
            </font>
           </property>
           <property name="toolTip">
-           <string>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the DWE network.</string>
+           <string>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the DWG network.</string>
           </property>
           <property name="text">
            <string>&amp;Message:</string>
@@ -87,7 +87,7 @@
         <item row="6" column="2">
          <widget class="QLineEdit" name="reqMessage">
           <property name="toolTip">
-           <string>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the DWE network.</string>
+           <string>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the DWG network.</string>
           </property>
           <property name="styleSheet">
            <string notr="true">color: #777;</string>
@@ -199,7 +199,7 @@
              <string>Clear All</string>
             </property>
             <property name="icon">
-             <iconset resource="../dwe.qrc">
+             <iconset resource="../dwg.qrc">
               <normaloff>:/icons/btn_remove_left</normaloff>:/icons/btn_remove_left</iconset>
             </property>
             <property name="autoDefault">
@@ -352,7 +352,7 @@
            <string>View Selected</string>
           </property>
           <property name="icon">
-           <iconset resource="../dwe.qrc">
+           <iconset resource="../dwg.qrc">
             <normaloff>:/icons/btn_view_selected_left</normaloff>:/icons/btn_view_selected_left</iconset>
           </property>
           <property name="autoDefault">
@@ -372,7 +372,7 @@
            <string>Remove Selected</string>
           </property>
           <property name="icon">
-           <iconset resource="../dwe.qrc">
+           <iconset resource="../dwg.qrc">
             <normaloff>:/icons/btn_remove_left</normaloff>:/icons/btn_remove_left</iconset>
           </property>
           <property name="autoDefault">
@@ -420,7 +420,7 @@
   <tabstop>removeRequestButton</tabstop>
  </tabstops>
  <resources>
-  <include location="../dwe.qrc"/>
+  <include location="../dwg.qrc"/>
  </resources>
  <connections/>
 </ui>

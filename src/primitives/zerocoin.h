@@ -1,8 +1,8 @@
-// Copyright (c) 2018 The DWE developers
+// Copyright (c) 2018 The DWG developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef DWE_ZEROCOIN_H
-#define DWE_ZEROCOIN_H
+#ifndef DWG_ZEROCOIN_H
+#define DWG_ZEROCOIN_H
 
 #include <amount.h>
 #include <limits.h>
@@ -189,4 +189,4 @@ public:
     int GetNeededSpends();
 };
 
-#endif //DWE_ZEROCOIN_H
+#endif //DWG_ZEROCOIN_H

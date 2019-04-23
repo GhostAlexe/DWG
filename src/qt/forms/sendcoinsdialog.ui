@@ -333,7 +333,7 @@
                   <enum>Qt::ActionsContextMenu</enum>
                  </property>
                  <property name="text">
-                  <string notr="true">0.00 DWE</string>
+                  <string notr="true">0.00 DWG</string>
                  </property>
                  <property name="textInteractionFlags">
                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -413,7 +413,7 @@
                   <enum>Qt::ActionsContextMenu</enum>
                  </property>
                  <property name="text">
-                  <string notr="true">0.00 DWE</string>
+                  <string notr="true">0.00 DWG</string>
                  </property>
                  <property name="textInteractionFlags">
                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -493,7 +493,7 @@
                   <enum>Qt::ActionsContextMenu</enum>
                  </property>
                  <property name="text">
-                  <string notr="true">0.00 DWE</string>
+                  <string notr="true">0.00 DWG</string>
                  </property>
                  <property name="textInteractionFlags">
                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -522,7 +522,7 @@
                   <enum>Qt::ActionsContextMenu</enum>
                  </property>
                  <property name="text">
-                  <string notr="true">0.00 DWE</string>
+                  <string notr="true">0.00 DWG</string>
                  </property>
                  <property name="textInteractionFlags">
                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -603,7 +603,7 @@
           <item>
            <widget class="QLabel" name="labelBlockSize">
             <property name="text">
-             <string>0 DWE</string>
+             <string>0 DWG</string>
             </property>
            </widget>
           </item>
@@ -946,7 +946,7 @@
                  <item>
                   <widget class="QRadioButton" name="radioCustomPerKilobyte">
                    <property name="toolTip">
-                    <string>If the custom fee is set to 1000 uDWEs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uDWEs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uDWEs. For transactions bigger than a kilobyte both pay by kilobyte.</string>
+                    <string>If the custom fee is set to 1000 uDWGs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uDWGs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uDWGs. For transactions bigger than a kilobyte both pay by kilobyte.</string>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">color: #9f9f9f</string>
@@ -965,7 +965,7 @@
                  <item>
                   <widget class="QRadioButton" name="radioCustomAtLeast">
                    <property name="toolTip">
-                    <string>If the custom fee is set to 1000 uDWEs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uDWEs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uDWEs. For transactions bigger than a kilobyte both pay by kilobyte.</string>
+                    <string>If the custom fee is set to 1000 uDWGs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uDWGs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uDWGs. For transactions bigger than a kilobyte both pay by kilobyte.</string>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">color: #9f9f9f</string>
@@ -990,7 +990,7 @@
                    <item>
                     <widget class="QCheckBox" name="checkBoxMinimumFee">
                      <property name="toolTip">
-                      <string>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for DWE transactions than the network can process.</string>
+                      <string>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for DWG transactions than the network can process.</string>
                      </property>
                      <property name="text">
                       <string/>
@@ -1003,7 +1003,7 @@
                       <bool>true</bool>
                      </property>
                      <property name="toolTip">
-                      <string>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for DWE transactions than the network can process.</string>
+                      <string>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for DWG transactions than the network can process.</string>
                      </property>
                      <property name="styleSheet">
                       <string notr="true">color: #9f9f9f</string>
@@ -1375,7 +1375,7 @@
           <string notr="true">color: #9f9f9f</string>
          </property>
          <property name="text">
-          <string notr="true">123.456 DWE</string>
+          <string notr="true">123.456 DWG</string>
          </property>
          <property name="textInteractionFlags">
           <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -1383,12 +1383,12 @@
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="checkzDWE">
+        <widget class="QCheckBox" name="checkzDWG">
          <property name="enabled">
           <bool>false</bool>
          </property>
          <property name="text">
-          <string>Anonymized DWE</string>
+          <string>Anonymized DWG</string>
          </property>
         </widget>
        </item>
@@ -1438,7 +1438,7 @@
         <string>Add &amp;Recipient</string>
        </property>
        <property name="icon">
-        <iconset resource="../dwe.qrc">
+        <iconset resource="../dwg.qrc">
          <normaloff>:/icons/btn_add_receipient_right</normaloff>:/icons/btn_add_receipient_right</iconset>
        </property>
        <property name="autoDefault">
@@ -1467,7 +1467,7 @@
         <string>Clear &amp;All</string>
        </property>
        <property name="icon">
-        <iconset resource="../dwe.qrc">
+        <iconset resource="../dwg.qrc">
          <normaloff>:/icons/btn_remove_left</normaloff>:/icons/btn_remove_left</iconset>
        </property>
        <property name="autoDefault">
@@ -1496,7 +1496,7 @@
         <string>S&amp;end</string>
        </property>
        <property name="icon">
-        <iconset resource="../dwe.qrc">
+        <iconset resource="../dwg.qrc">
          <normaloff>:/icons/btn_send_right</normaloff>:/icons/btn_send_right</iconset>
        </property>
        <property name="autoDefault">
@@ -1525,7 +1525,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../dwe.qrc"/>
+  <include location="../dwg.qrc"/>
  </resources>
  <connections/>
  <buttongroups>

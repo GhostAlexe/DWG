@@ -89,7 +89,7 @@ use old versions of Upstart and do not supply the start-stop-daemon uitility.
 Copy dwed.init to /etc/init.d/dwed. Test by running "service dwed start".
 
 Using this script, you can adjust the path and flags to the dwed program by
-setting the DWED and FLAGS environment variables in the file
+setting the DWGD and FLAGS environment variables in the file
 /etc/sysconfig/dwed. You can also use the DAEMONOPTS environment variable here.
 
 5. Auto-respawn

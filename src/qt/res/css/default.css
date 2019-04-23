@@ -726,7 +726,7 @@ QWidget#PrivacyDialog QLabel {
 border:0px solid #000;
 }
 
-QWidget#PrivacyDialog QLabel#zDWELabel {
+QWidget#PrivacyDialog QLabel#zDWGLabel {
 font-size:16px;
 }
 
@@ -737,7 +737,7 @@ QWidget#PrivacyDialog QPlainTextEdit#TEMintStatus {
     font-size: 12px;
 }
 
-QWidget#PrivacyDialog QFrame#frmZdweLabel,
+QWidget#PrivacyDialog QFrame#frmZdwgLabel,
 QWidget#PrivacyDialog QFrame#frmMintStatus {
     background-color: #e3e3e3;
     border: none;
@@ -760,7 +760,7 @@ QWidget#PrivacyDialog QFrame#frame_2_2 {
     border-left: 1px solid #ddd;
 }
 
-QWidget#PrivacyDialog QLabel#oDWELabel {
+QWidget#PrivacyDialog QLabel#oDWGLabel {
 font-size:14px;
 color:#ffffff;
 background-color:qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #3e2bce, stop: 1 #2dd3aa);
@@ -780,10 +780,10 @@ padding-top:5px;
 padding-bottom:5px;
 }
 
-QWidget#PrivacyDialog QPushButton#pushButtonMintzDWE,
+QWidget#PrivacyDialog QPushButton#pushButtonMintzDWG,
 QWidget#PrivacyDialog QPushButton#pushButtonCoinControl,
-QWidget#PrivacyDialog QPushButton#pushButtonZDweControl,
-QWidget#PrivacyDialog QPushButton#pushButtonSpendzDWE {
+QWidget#PrivacyDialog QPushButton#pushButtonZDwgControl,
+QWidget#PrivacyDialog QPushButton#pushButtonSpendzDWG {
     background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #47c3b5, stop: 0.49 #47c3b5, stop: 0.51 #19b4a2, stop: 1 #19b4a2);background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #47c3b5, stop: 0.49 #47c3b5, stop: 0.51 #19b4a2, stop: 1 #19b4a2);
     color: #fff;
 }
@@ -920,12 +920,12 @@ QDialog#HelpMessageDialog QScrollBar:vertical, QDialog#HelpMessageDialog QScroll
 border:0;
 }
 
-/* About Dwe Dialog */
-QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About Dwe Contents */
+/* About Dwg Dialog */
+QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About Dwg Contents */
 margin-left:10px;
 }
 
-QDialog#AboutDialog QLabel#label_2 { /* Margin for About Dwe text */
+QDialog#AboutDialog QLabel#label_2 { /* Margin for About Dwg text */
 margin-right:10px;
 }
 
@@ -944,7 +944,7 @@ min-width:160px;
 font-weight:normal;
 }
 
-QWidget .QFrame#frame .QLabel#label_5 { /* DWE Balances Label */
+QWidget .QFrame#frame .QLabel#label_5 { /* DWG Balances Label */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 min-width:160px;
 background-color:transparent;
@@ -1079,7 +1079,7 @@ margin-right:5px;
 padding-right:5px;
 }
 
-QWidget .QFrame#frame_5 .QLabel#labelzBalanceText { /* Available zDWE Label */
+QWidget .QFrame#frame_5 .QLabel#labelzBalanceText { /* Available zDWG Label */
 /*qproperty-alignment: 'AlignVCenter | AlignRight';*/
 min-width:160px;
 background: transparent;
@@ -1089,7 +1089,7 @@ padding-right:5px;
 font-size:14px;
 }
 
-QWidget .QFrame#frame_5 .QLabel#labelzBalance { /* Available zDWE Balance */
+QWidget .QFrame#frame_5 .QLabel#labelzBalance { /* Available zDWG Balance */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 font-size:12px;
 font-weight:bold;
@@ -1097,7 +1097,7 @@ color:#3b50c7;
 margin-left:0px;
 }
 
-QWidget .QFrame#frame_6 .QLabel#labelDWEPercent { /* Available zDWE Balance */
+QWidget .QFrame#frame_6 .QLabel#labelDWGPercent { /* Available zDWG Balance */
     qproperty-alignment: 'AlignVCenter | AlignLeft';
     font-size:12px;
     font-weight:bold;
@@ -1105,7 +1105,7 @@ QWidget .QFrame#frame_6 .QLabel#labelDWEPercent { /* Available zDWE Balance */
     margin-left:0px;
 }
 
-QWidget .QFrame#frame_6 .QLabel#labelzDWEPercent { /* Available zDWE Balance */
+QWidget .QFrame#frame_6 .QLabel#labelzDWGPercent { /* Available zDWG Balance */
     qproperty-alignment: 'AlignVCenter | AlignLeft';
     font-size:12px;
     font-weight:bold;
@@ -1113,7 +1113,7 @@ QWidget .QFrame#frame_6 .QLabel#labelzDWEPercent { /* Available zDWE Balance */
     margin-left:0px;
 }
 
-QWidget .QFrame#frame_5 .QLabel#labelzBalanceUnconfirmedText { /* Unconfirmed zDWE Label */
+QWidget .QFrame#frame_5 .QLabel#labelzBalanceUnconfirmedText { /* Unconfirmed zDWG Label */
 /*qproperty-alignment: 'AlignVCenter | AlignRight';*/
 min-width:160px;
 background: transparent;
@@ -1123,7 +1123,7 @@ padding-right:5px;
 font-size:14px;
 }
 
-QWidget .QFrame#frame_5 .QLabel#labelzBalanceUnconfirmed { /* Unconfirmed zDWE Balance */
+QWidget .QFrame#frame_5 .QLabel#labelzBalanceUnconfirmed { /* Unconfirmed zDWG Balance */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 font-size:12px;
 font-weight:bold;
@@ -1131,7 +1131,7 @@ color:#1f4f9e;
 margin-left:0px;
 }
 
-QWidget .QFrame#frame_5 .QLabel#labelzBalanceMatureText { /* Mature zDWE Label */
+QWidget .QFrame#frame_5 .QLabel#labelzBalanceMatureText { /* Mature zDWG Label */
 /*qproperty-alignment: 'AlignVCenter | AlignRight';*/
 min-width:160px;
 background: transparent;
@@ -1141,7 +1141,7 @@ padding-right:5px;
 font-size:14px;
 }
 
-QWidget .QFrame#frame_5 .QLabel#labelzBalanceMature { /* Mature zDWE Balance */
+QWidget .QFrame#frame_5 .QLabel#labelzBalanceMature { /* Mature zDWG Balance */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 font-size:12px;
 font-weight:bold;
@@ -1149,7 +1149,7 @@ color:#3b50c7;
 margin-left:0px;
 }
 
-QWidget .QFrame#frame_5 .QLabel#labelzBalanceImmatureText { /* Immature zDWE Label */
+QWidget .QFrame#frame_5 .QLabel#labelzBalanceImmatureText { /* Immature zDWG Label */
 /*qproperty-alignment: 'AlignVCenter | AlignRight';*/
 min-width:160px;
 background: transparent;
@@ -1159,7 +1159,7 @@ padding-right:5px;
 font-size:14px;
 }
 
-QWidget .QFrame#frame_5 .QLabel#labelzBalanceImmature { /* Immature zDWE Balance */
+QWidget .QFrame#frame_5 .QLabel#labelzBalanceImmature { /* Immature zDWG Balance */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 font-size:12px;
 font-weight:bold;
@@ -1178,7 +1178,7 @@ margin-right:5px;
 padding-right:5px;
 }
 
-QWidget .QFrame#frame_6 .QLabel#labelBalanceTextz { /* Available DWE Label */
+QWidget .QFrame#frame_6 .QLabel#labelBalanceTextz { /* Available DWG Label */
 /*qproperty-alignment: 'AlignVCenter | AlignRight';*/
 min-width:160px;
 background: transparent;
@@ -1188,7 +1188,7 @@ padding-right:5px;
 font-size:14px;
 }
 
-QWidget .QFrame#frame_6 .QLabel#labelBalancez { /* Available DWE Balance */
+QWidget .QFrame#frame_6 .QLabel#labelBalancez { /* Available DWG Balance */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 font-size:12px;
 font-weight:bold;
@@ -1196,7 +1196,7 @@ color:#3b50c7;
 margin-left:0px;
 }
 
-QWidget .QFrame#frame_6 .QLabel#labelzBalanceTextz { /* Available zDWE Label */
+QWidget .QFrame#frame_6 .QLabel#labelzBalanceTextz { /* Available zDWG Label */
 /*qproperty-alignment: 'AlignVCenter | AlignRight';*/
 min-width:160px;
 background: transparent;
@@ -1206,7 +1206,7 @@ padding-right:5px;
 font-size:14px;
 }
 
-QWidget .QFrame#frame_6 .QLabel#labelzBalancez { /* Available zDWE Balance */
+QWidget .QFrame#frame_6 .QLabel#labelzBalancez { /* Available zDWG Balance */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 font-size:12px;
 font-weight:bold;
@@ -1214,7 +1214,7 @@ color:#3b50c7;
 margin-left:0px;
 }
 
-QWidget .QFrame#frame_6 .QLabel#labelLockedBalanceText { /* Available zDWE Label */
+QWidget .QFrame#frame_6 .QLabel#labelLockedBalanceText { /* Available zDWG Label */
 /*qproperty-alignment: 'AlignVCenter | AlignRight';*/
 min-width:160px;
 background: transparent;
@@ -1224,7 +1224,7 @@ padding-right:5px;
 font-size:14px;
 }
 
-QWidget .QFrame#frame_6 .QLabel#labelLockedBalance { /* Available zDWE Balance */
+QWidget .QFrame#frame_6 .QLabel#labelLockedBalance { /* Available zDWG Balance */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 font-size:12px;
 font-weight:bold;
@@ -1232,7 +1232,7 @@ color:#3b50c7;
 margin-left:0px;
 }
 
-QWidget .QFrame#frame_6 .QLabel#labelUnLockedBalanceText { /* Available zDWE Label */
+QWidget .QFrame#frame_6 .QLabel#labelUnLockedBalanceText { /* Available zDWG Label */
 /*qproperty-alignment: 'AlignVCenter | AlignRight';*/
 min-width:160px;
 background: transparent;
@@ -1242,7 +1242,7 @@ padding-right:5px;
 font-size:14px;
 }
 
-QWidget .QFrame#frame_6 .QLabel#labelUnLockedBalance { /* Available zDWE Balance */
+QWidget .QFrame#frame_6 .QLabel#labelUnLockedBalance { /* Available zDWG Balance */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 font-size:12px;
 font-weight:bold;
@@ -1275,7 +1275,7 @@ min-width:410px;
 min-height:100px;
 margin-left:0;
 margin-top:0;
-background-image: url(':/images/dwe_logo_horizontal');
+background-image: url(':/images/dwg_logo_horizontal');
 background-repeat:none;
 }
 

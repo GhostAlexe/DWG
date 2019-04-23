@@ -66,15 +66,15 @@ bin_PROGRAMS =
 TESTS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += dwed
+  bin_PROGRAMS += dwgd
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += dwe-cli dwe-tx
+  bin_PROGRAMS += dwg-cli dwg-tx
 endif
 
 .PHONY: FORCE
-# dwe core #
+# dwg core #
 BITCOIN_CORE_H = \
   activemasternode.h \
   accumulators.h \
@@ -190,7 +190,7 @@ obj/build.h: FORCE
 	  $(abs_top_srcdir)
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between dwed and dwe-qt
+# server: shared between dwgd and dwg-qt
 libbitcoin_server_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_SOURCES = \
   addrman.cpp \
@@ -236,7 +236,7 @@ libbitcoin_zmq_a_SOURCES = \
   zmq/zmqpublishnotifier.cpp
 endif
 
-# wallet: shared between dwed and dwe-qt, but only linked
+# wallet: shared between dwgd and dwg-qt, but only linked
 # when wallet enabled
 
 libbitcoin_wallet_a_CFLAGS = -fPIC
@@ -332,7 +332,7 @@ libzerocoin_libbitcoin_zerocoin_a_SOURCES = \
   libzerocoin/Params.cpp \
   libzerocoin/SerialNumberSignatureOfKnowledge.cpp
 
-# common: shared between dwed, and dwe-qt and non-server tools
+# common: shared between dwgd, and dwg-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_common_a_SOURCES = \
   accumulators.cpp \
@@ -392,7 +392,7 @@ libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 libbitcoin_util_a_SOURCES += compat/glibcxx_compat.cpp
 endif
 
-# cli: shared between dwe-cli and dwe-qt
+# cli: shared between dwg-cli and dwg-qt
 libbitcoin_cli_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_SOURCES = \
   rpcclient.cpp \
@@ -402,7 +402,7 @@ nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-dwed_LDADD = \
+dwgd_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UNIVALUE) \
@@ -414,26 +414,26 @@ dwed_LDADD = \
   $(LIBSECP256K1)
 
 if ENABLE_ZMQ
-dwed_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+dwgd_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
 
 if ENABLE_WALLET
-dwed_LDADD += libbitcoin_wallet.a
+dwgd_LDADD += libbitcoin_wallet.a
 endif
-dwed_SOURCES = dwed.cpp
+dwgd_SOURCES = dwgd.cpp
 #
 
 if TARGET_WINDOWS
-dwed_SOURCES += dwed-res.rc
+dwgd_SOURCES += dwgd-res.rc
 endif
 
-dwed_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-dwed_CPPFLAGS = $(BITCOIN_INCLUDES)
-dwed_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+dwgd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
+dwgd_CPPFLAGS = $(BITCOIN_INCLUDES)
+dwgd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 
-# dwe-cli binary #
-dwe_cli_LDADD = \
+# dwg-cli binary #
+dwg_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBBITCOIN_UTIL) \
   $(BOOST_LIBS) \
@@ -441,14 +441,14 @@ dwe_cli_LDADD = \
   $(CRYPTO_LIBS) \
   $(EVENT_LIBS)
 
-dwe_cli_SOURCES = \
-  dwe-cli.cpp
+dwg_cli_SOURCES = \
+  dwg-cli.cpp
 
-dwe_cli_CPPFLAGS = $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+dwg_cli_CPPFLAGS = $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
 #
 
-# dwe-tx binary #
-dwe_tx_LDADD = \
+# dwg-tx binary #
+dwg_tx_LDADD = \
   $(LIBBITCOIN_UNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_ZEROCOIN) \
@@ -458,15 +458,15 @@ dwe_tx_LDADD = \
   $(BOOST_LIBS) \
   $(CRYPTO_LIBS)
 
-dwe_tx_SOURCES = dwe-tx.cpp
-dwe_tx_CPPFLAGS = $(BITCOIN_INCLUDES)
+dwg_tx_SOURCES = dwg-tx.cpp
+dwg_tx_CPPFLAGS = $(BITCOIN_INCLUDES)
 #
-dwe_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+dwg_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-dwe_cli_SOURCES += dwe-cli-res.rc
+dwg_cli_SOURCES += dwg-cli-res.rc
 endif
-dwe_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+dwg_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if BUILD_BITCOIN_LIBS
 include_HEADERS = script/bitcoinconsensus.h

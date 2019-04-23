@@ -3,7 +3,7 @@
  *
  * @brief      Functions for converting to/from Zerocoin Denominations to other values library.
  *
- * @copyright  Copyright 2017 DWE Developers
+ * @copyright  Copyright 2017 DWG Developers
  * @license    This project is released under the MIT license.
  **/
 
@@ -65,7 +65,7 @@ CoinDenomination AmountToZerocoinDenomination(CAmount amount)
 }
 
 // return the highest denomination that is less than or equal to the amount given
-// use case: converting Dwe to zDwe without user worrying about denomination math themselves
+// use case: converting Dwg to zDwg without user worrying about denomination math themselves
 CoinDenomination AmountToClosestDenomination(CAmount nAmount, CAmount& nRemaining)
 {
     if (nAmount < 1 * COIN)

@@ -9,8 +9,8 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between dwe-cli and dwed)
- * of a given instance of the Dwe system.
+ * CBaseChainParams defines the base parameters (shared between dwg-cli and dwgd)
+ * of a given instance of the Dwg system.
  */
 class CBaseChainParams
 {

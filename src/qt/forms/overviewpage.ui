@@ -88,7 +88,7 @@
                </font>
               </property>
               <property name="text">
-               <string>DWE Balances</string>
+               <string>DWG Balances</string>
               </property>
              </widget>
             </item>
@@ -103,7 +103,7 @@
                <cursorShape>WhatsThisCursor</cursorShape>
               </property>
               <property name="toolTip">
-               <string>The displayed information may be out of date. Your wallet automatically synchronizes with the DWE network after a connection is established, but this process has not completed yet.</string>
+               <string>The displayed information may be out of date. Your wallet automatically synchronizes with the DWG network after a connection is established, but this process has not completed yet.</string>
               </property>
               <property name="styleSheet">
                <string notr="true">QLabel { color: red; }</string>
@@ -151,7 +151,7 @@
                <string>Unconfirmed transactions to watch-only addresses</string>
               </property>
               <property name="text">
-               <string notr="true">0.000 000 00 DWE</string>
+               <string notr="true">0.000 000 00 DWG</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -186,7 +186,7 @@
                <string>Your current total balance</string>
               </property>
               <property name="text">
-               <string notr="true">0.000 000 00 DWE</string>
+               <string notr="true">0.000 000 00 DWG</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -218,7 +218,7 @@
                <string>Staked or masternode rewards in watch-only addresses that has not yet matured</string>
               </property>
               <property name="text">
-               <string notr="true">0.000 000 00 DWE</string>
+               <string notr="true">0.000 000 00 DWG</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -250,7 +250,7 @@
                <string>Staked or masternode rewards that has not yet matured</string>
               </property>
               <property name="text">
-               <string notr="true">0.000 000 00 DWE</string>
+               <string notr="true">0.000 000 00 DWG</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -275,7 +275,7 @@
                <string>Your current spendable balance</string>
               </property>
               <property name="text">
-               <string notr="true">0.000 000 00 DWE</string>
+               <string notr="true">0.000 000 00 DWG</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -300,7 +300,7 @@
                <string>Your current balance in watch-only addresses</string>
               </property>
               <property name="text">
-               <string notr="true">0.000 000 00 DWE</string>
+               <string notr="true">0.000 000 00 DWG</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -325,7 +325,7 @@
                <string>Total of transactions that have yet to be confirmed, and do not yet count toward the spendable balance</string>
               </property>
               <property name="text">
-               <string notr="true">0.000 000 00 DWE</string>
+               <string notr="true">0.000 000 00 DWG</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -364,7 +364,7 @@
                <string>Current total balance in watch-only addresses</string>
               </property>
               <property name="text">
-               <string notr="true">0.000 000 00 DWE</string>
+               <string notr="true">0.000 000 00 DWG</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -494,7 +494,7 @@
              <widget class="QLabel" name="labelzBalanceMatureText">
               <property name="toolTip">
                <string>Mature: more than 20 confirmation and more than 3 mints of the same denomination after it was minted.
-These zDWE are spendable.</string>
+These zDWG are spendable.</string>
               </property>
               <property name="text">
                <string>Mature:</string>
@@ -520,10 +520,10 @@ These zDWE are spendable.</string>
                <cursorShape>IBeamCursor</cursorShape>
               </property>
               <property name="toolTip">
-               <string>All available zDWE, unconfirmed and immature zDWE included.</string>
+               <string>All available zDWG, unconfirmed and immature zDWG included.</string>
               </property>
               <property name="text">
-               <string notr="true">0.000 000 00 DWE</string>
+               <string notr="true">0.000 000 00 DWG</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -555,7 +555,7 @@ These zDWE are spendable.</string>
             <item row="1" column="0">
              <widget class="QLabel" name="labelzBalanceText">
               <property name="toolTip">
-               <string>All available zDWE, unconfirmed and immature zDWE included.</string>
+               <string>All available zDWG, unconfirmed and immature zDWG included.</string>
               </property>
               <property name="text">
                <string>Total:</string>
@@ -598,10 +598,10 @@ These zDWE are spendable.</string>
               </property>
               <property name="toolTip">
                <string>Mature: more than 20 confirmation and more than 3 mints of the same denomination after it was minted.
-These zDWE are spendable.</string>
+These zDWG are spendable.</string>
               </property>
               <property name="text">
-               <string>0.000 000 00 DWE</string>
+               <string>0.000 000 00 DWG</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -632,7 +632,7 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
 Immature: confirmed, but less than 3 mints of the same denomination after it was minted</string>
               </property>
               <property name="text">
-               <string>0.000 000 00 DWE</string>
+               <string>0.000 000 00 DWG</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -676,7 +676,7 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
 Immature: confirmed, but less than 3 mints of the same denomination after it was minted</string>
               </property>
               <property name="text">
-               <string>0.000 000 00 DWE</string>
+               <string>0.000 000 00 DWG</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -821,7 +821,7 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
                <string>Total of transactions that have yet to be confirmed, and do not yet count toward the spendable balance</string>
               </property>
               <property name="text">
-               <string notr="true">0.000 000 00 DWE</string>
+               <string notr="true">0.000 000 00 DWG</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -846,7 +846,7 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
                <string>Total Balance, including unconfirmed and immature coins.</string>
               </property>
               <property name="text">
-               <string notr="true">0.000 000 00 DWE</string>
+               <string notr="true">0.000 000 00 DWG</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -879,7 +879,7 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
             <item row="1" column="0">
              <widget class="QLabel" name="labelBalanceTextz">
               <property name="text">
-               <string>DWE:</string>
+               <string>DWG:</string>
               </property>
              </widget>
             </item>
@@ -898,7 +898,7 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
                <string>Your current spendable balance</string>
               </property>
               <property name="text">
-               <string notr="true">0.000 000 00 DWE</string>
+               <string notr="true">0.000 000 00 DWG</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -914,12 +914,12 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
                <string/>
               </property>
               <property name="text">
-               <string>zDWE:</string>
+               <string>zDWG:</string>
               </property>
              </widget>
             </item>
             <item row="4" column="2">
-             <widget class="QLabel" name="labelzDWEPercent">
+             <widget class="QLabel" name="labelzDWGPercent">
               <property name="font">
                <font>
                 <weight>75</weight>
@@ -927,7 +927,7 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
                </font>
               </property>
               <property name="toolTip">
-               <string>Current percentage of zDWE.
+               <string>Current percentage of zDWG.
 If AutoMint is enabled this percentage will settle around the configured AutoMint percentage (default = 10%)</string>
               </property>
               <property name="text">
@@ -957,10 +957,10 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
                </font>
               </property>
               <property name="toolTip">
-               <string>Locked DWE or Masternode collaterals. These are excluded from zDWE minting.</string>
+               <string>Locked DWG or Masternode collaterals. These are excluded from zDWG minting.</string>
               </property>
               <property name="text">
-               <string>0.000 000 00 DWE</string>
+               <string>0.000 000 00 DWG</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -970,7 +970,7 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
             <item row="2" column="0">
              <widget class="QLabel" name="labelLockedBalanceText">
               <property name="toolTip">
-               <string>Locked DWE or Masternode collaterals. These are excluded from zDWE minting.</string>
+               <string>Locked DWG or Masternode collaterals. These are excluded from zDWG minting.</string>
               </property>
               <property name="text">
                <string>Locked:</string>
@@ -980,7 +980,7 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
             <item row="3" column="0">
              <widget class="QLabel" name="labelUnLockedBalanceText">
               <property name="toolTip">
-               <string>Unlocked DWEs. These can be used for zDWE minting.</string>
+               <string>Unlocked DWGs. These can be used for zDWG minting.</string>
               </property>
               <property name="text">
                <string>Unlocked:</string>
@@ -996,10 +996,10 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
                </font>
               </property>
               <property name="toolTip">
-               <string>Unlocked DWEs. These can be used for zDWE minting.</string>
+               <string>Unlocked DWGs. These can be used for zDWG minting.</string>
               </property>
               <property name="text">
-               <string>0.000 000 00 DWE</string>
+               <string>0.000 000 00 DWG</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1007,7 +1007,7 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
              </widget>
             </item>
             <item row="3" column="2">
-             <widget class="QLabel" name="labelDWEPercent">
+             <widget class="QLabel" name="labelDWGPercent">
               <property name="font">
                <font>
                 <weight>75</weight>
@@ -1117,7 +1117,7 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
                 <cursorShape>WhatsThisCursor</cursorShape>
                </property>
                <property name="toolTip">
-                <string>The displayed information may be out of date. Your wallet automatically synchronizes with the DWE network after a connection is established, but this process has not completed yet.</string>
+                <string>The displayed information may be out of date. Your wallet automatically synchronizes with the DWG network after a connection is established, but this process has not completed yet.</string>
                </property>
                <property name="styleSheet">
                 <string notr="true">QLabel { color: red; }</string>

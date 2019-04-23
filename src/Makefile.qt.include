@@ -1,34 +1,34 @@
-bin_PROGRAMS += qt/dwe-qt
+bin_PROGRAMS += qt/dwg-qt
 EXTRA_LIBRARIES += qt/libbitcoinqt.a
 
-# dwe qt core #
+# dwg qt core #
 QT_TS = \
-  qt/locale/dwe_bg.ts \
-  qt/locale/dwe_ca.ts \
-  qt/locale/dwe_cs.ts \
-  qt/locale/dwe_da.ts \
-  qt/locale/dwe_de.ts \
-  qt/locale/dwe_en.ts \
-  qt/locale/dwe_en_US.ts \
-  qt/locale/dwe_es.ts \
-  qt/locale/dwe_fi.ts \
-  qt/locale/dwe_fr_FR.ts \
-  qt/locale/dwe_hr.ts \
-  qt/locale/dwe_it.ts \
-  qt/locale/dwe_ja.ts \
-  qt/locale/dwe_ko_KR.ts \
-  qt/locale/dwe_nl.ts \
-  qt/locale/dwe_pl.ts \
-  qt/locale/dwe_pt.ts \
-  qt/locale/dwe_pt_BR.ts \
-  qt/locale/dwe_ro_RO.ts \
-  qt/locale/dwe_ru.ts \
-  qt/locale/dwe_sk.ts \
-  qt/locale/dwe_sv.ts \
-  qt/locale/dwe_tr.ts \
-  qt/locale/dwe_uk.ts \
-  qt/locale/dwe_zh_CN.ts \
-  qt/locale/dwe_zh_TW.ts
+  qt/locale/dwg_bg.ts \
+  qt/locale/dwg_ca.ts \
+  qt/locale/dwg_cs.ts \
+  qt/locale/dwg_da.ts \
+  qt/locale/dwg_de.ts \
+  qt/locale/dwg_en.ts \
+  qt/locale/dwg_en_US.ts \
+  qt/locale/dwg_es.ts \
+  qt/locale/dwg_fi.ts \
+  qt/locale/dwg_fr_FR.ts \
+  qt/locale/dwg_hr.ts \
+  qt/locale/dwg_it.ts \
+  qt/locale/dwg_ja.ts \
+  qt/locale/dwg_ko_KR.ts \
+  qt/locale/dwg_nl.ts \
+  qt/locale/dwg_pl.ts \
+  qt/locale/dwg_pt.ts \
+  qt/locale/dwg_pt_BR.ts \
+  qt/locale/dwg_ro_RO.ts \
+  qt/locale/dwg_ru.ts \
+  qt/locale/dwg_sk.ts \
+  qt/locale/dwg_sv.ts \
+  qt/locale/dwg_tr.ts \
+  qt/locale/dwg_uk.ts \
+  qt/locale/dwg_zh_CN.ts \
+  qt/locale/dwg_zh_TW.ts
 
 QT_FORMS_UI = \
   qt/forms/addressbookpage.ui \
@@ -54,7 +54,7 @@ QT_FORMS_UI = \
   qt/forms/sendcoinsentry.ui \
   qt/forms/signverifymessagedialog.ui \
   qt/forms/transactiondescdialog.ui \
-  qt/forms/zdwecontroldialog.ui
+  qt/forms/zdwgcontroldialog.ui
 
 QT_MOC_CPP = \
   qt/moc_addressbookpage.cpp \
@@ -107,23 +107,23 @@ QT_MOC_CPP = \
   qt/moc_walletframe.cpp \
   qt/moc_walletmodel.cpp \
   qt/moc_walletview.cpp \
-  qt/moc_zdwecontroldialog.cpp
+  qt/moc_zdwgcontroldialog.cpp
 
 BITCOIN_MM = \
   qt/macdockiconhandler.mm \
   qt/macnotificationhandler.mm
 
 QT_MOC = \
-  qt/dwe.moc \
+  qt/dwg.moc \
   qt/bitcoinamountfield.moc \
   qt/intro.moc \
   qt/overviewpage.moc \
   qt/rpcconsole.moc
 
-QT_QRC_CPP = qt/qrc_dwe.cpp
-QT_QRC = qt/dwe.qrc
-QT_QRC_LOCALE_CPP = qt/qrc_dwe_locale.cpp
-QT_QRC_LOCALE = qt/dwe_locale.qrc
+QT_QRC_CPP = qt/qrc_dwg.cpp
+QT_QRC = qt/dwg.qrc
+QT_QRC_LOCALE_CPP = qt/qrc_dwg_locale.cpp
+QT_QRC_LOCALE = qt/dwg_locale.qrc
 
 PROTOBUF_CC = qt/paymentrequest.pb.cc
 PROTOBUF_H = qt/paymentrequest.pb.h
@@ -187,7 +187,7 @@ BITCOIN_QT_H = \
   qt/walletmodeltransaction.h \
   qt/walletview.h \
   qt/winshutdownmonitor.h \
-  qt/zdwecontroldialog.h
+  qt/zdwgcontroldialog.h
 
 RES_ICONS = \
   qt/res/icons/add.png \
@@ -241,12 +241,12 @@ RES_ICONS = \
   qt/res/icons/tx_input.png \
   qt/res/icons/tx_output.png \
   qt/res/icons/tx_mined.png \
-  qt/res/icons/unit_dwe.png \
-  qt/res/icons/unit_mdwe.png \
-  qt/res/icons/unit_udwe.png \
-  qt/res/icons/unit_tdwe.png \
-  qt/res/icons/unit_tmdwe.png \
-  qt/res/icons/unit_tudwe.png
+  qt/res/icons/unit_dwg.png \
+  qt/res/icons/unit_mdwg.png \
+  qt/res/icons/unit_udwg.png \
+  qt/res/icons/unit_tdwg.png \
+  qt/res/icons/unit_tmdwg.png \
+  qt/res/icons/unit_tudwg.png
 
 BITCOIN_QT_CPP = \
   qt/bitcoinaddressvalidator.cpp \
@@ -308,7 +308,7 @@ BITCOIN_QT_CPP += \
   qt/walletmodel.cpp \
   qt/walletmodeltransaction.cpp \
   qt/walletview.cpp \
-  qt/zdwecontroldialog.cpp
+  qt/zdwgcontroldialog.cpp
 
 endif
 
@@ -316,7 +316,7 @@ RES_IMAGES = \
   qt/res/images/about.png \
   qt/res/images/splash.png \
   qt/res/images/splash_testnet.png \
-  qt/res/images/dwe_logo_horizontal.png \
+  qt/res/images/dwg_logo_horizontal.png \
   qt/res/images/downArrow.png \
   qt/res/images/downArrow_small.png \
   qt/res/images/upArrow_small.png \
@@ -332,7 +332,7 @@ RES_CSS = \
 
 RES_MOVIES = $(wildcard $(srcdir)/qt/res/movies/spinner-*.png)
 
-BITCOIN_RC = qt/res/dwe-qt-res.rc
+BITCOIN_RC = qt/res/dwg-qt-res.rc
 
 BITCOIN_QT_INCLUDES = -I$(builddir)/qt -I$(srcdir)/qt -I$(srcdir)/qt/forms \
   -I$(builddir)/qt/forms
@@ -352,69 +352,69 @@ QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
 $(QT_MOC): $(QT_FORMS_H)
-$(qt_libbitcoinqt_a_OBJECTS) $(qt_dwe_qt_OBJECTS) : | $(QT_MOC)
+$(qt_libbitcoinqt_a_OBJECTS) $(qt_dwg_qt_OBJECTS) : | $(QT_MOC)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
 $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
-# dwe-qt binary #
-qt_dwe_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+# dwg-qt binary #
+qt_dwg_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
 
-qt_dwe_qt_SOURCES = qt/dwe.cpp
+qt_dwg_qt_SOURCES = qt/dwg.cpp
 if TARGET_DARWIN
-  qt_dwe_qt_SOURCES += $(BITCOIN_MM)
+  qt_dwg_qt_SOURCES += $(BITCOIN_MM)
 endif
 if TARGET_WINDOWS
-  qt_dwe_qt_SOURCES += $(BITCOIN_RC)
+  qt_dwg_qt_SOURCES += $(BITCOIN_RC)
 endif
-qt_dwe_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
+qt_dwg_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET
-qt_dwe_qt_LDADD += $(LIBBITCOIN_WALLET)
+qt_dwg_qt_LDADD += $(LIBBITCOIN_WALLET)
 endif
 if ENABLE_ZMQ
-qt_dwe_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+qt_dwg_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
-qt_dwe_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBBITCOIN_UNIVALUE) $(LIBBITCOIN_ZEROCOIN) $(LIBLEVELDB) $(LIBMEMENV) \
+qt_dwg_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBBITCOIN_UNIVALUE) $(LIBBITCOIN_ZEROCOIN) $(LIBLEVELDB) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1) \
   $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-qt_dwe_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-qt_dwe_qt_LIBTOOLFLAGS = --tag CXX
+qt_dwg_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_dwg_qt_LIBTOOLFLAGS = --tag CXX
 
 #locale/foo.ts -> locale/foo.qm
 QT_QM=$(QT_TS:.ts=.qm)
 
 .SECONDARY: $(QT_QM)
 
-qt/dwestrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES)
+qt/dwgstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES)
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) $(PYTHON) ../share/qt/extract_strings_qt.py $^
 
-translate: qt/dwestrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: qt/dwgstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts qt/locale/dwe_en.ts
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts qt/locale/dwg_en.ts
 
 $(QT_QRC_LOCALE_CPP): $(QT_QRC_LOCALE) $(QT_QM)
 	@test -f $(RCC)
 	@test -f $(@D)/$(<F) || cp -f $< $(@D)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name dwe_locale $(@D)/$(<F) | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name dwg_locale $(@D)/$(<F) | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_MOVIES) $(PROTOBUF_H)
 	@test -f $(RCC)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name dwe $< | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name dwg $< | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
 CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno
 
 CLEANFILES += $(CLEAN_QT)
 
-dwe_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_dwe_qt_OBJECTS) qt/dwe-qt$(EXEEXT) $(LIBBITCOINQT)
+dwg_qt_clean: FORCE
+	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_dwg_qt_OBJECTS) qt/dwg-qt$(EXEEXT) $(LIBBITCOINQT)
 
-dwe_qt : qt/dwe-qt$(EXEEXT)
+dwg_qt : qt/dwg-qt$(EXEEXT)
 
 ui_%.h: %.ui
 	@test -f $(UIC)

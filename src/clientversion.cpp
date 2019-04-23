@@ -10,10 +10,10 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both dwed and dwe-qt, to make it harder for attackers to
+ * for both dwgd and dwg-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("DWE Core");
+const std::string CLIENT_NAME("DWG Core");
 
 /**
  * Client version number

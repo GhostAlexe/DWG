@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The DWE developers
+// Copyright (c) 2015-2017 The DWG developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -19,18 +19,18 @@ BitcoinUnits::BitcoinUnits(QObject* parent) : QAbstractListModel(parent),
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(DWE);
-    unitlist.append(mDWE);
-    unitlist.append(uDWE);
+    unitlist.append(DWG);
+    unitlist.append(mDWG);
+    unitlist.append(uDWG);
     return unitlist;
 }
 
 bool BitcoinUnits::valid(int unit)
 {
     switch (unit) {
-    case DWE:
-    case mDWE:
-    case uDWE:
+    case DWG:
+    case mDWG:
+    case uDWG:
         return true;
     default:
         return false;
@@ -40,12 +40,12 @@ bool BitcoinUnits::valid(int unit)
 QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
-    case DWE:
-        return QString("dwe");
-    case mDWE:
-        return QString("mdwe");
-    case uDWE:
-        return QString::fromUtf8("udwe");
+    case DWG:
+        return QString("dwg");
+    case mDWG:
+        return QString("mdwg");
+    case uDWG:
+        return QString::fromUtf8("udwg");
     default:
         return QString("???");
     }
@@ -55,23 +55,23 @@ QString BitcoinUnits::name(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case DWE:
-            return QString("DWE");
-        case mDWE:
-            return QString("mDWE");
-        case uDWE:
-            return QString::fromUtf8("μDWE");
+        case DWG:
+            return QString("DWG");
+        case mDWG:
+            return QString("mDWG");
+        case uDWG:
+            return QString::fromUtf8("μDWG");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case DWE:
-            return QString("tDWE");
-        case mDWE:
-            return QString("mtDWE");
-        case uDWE:
-            return QString::fromUtf8("μtDWE");
+        case DWG:
+            return QString("tDWG");
+        case mDWG:
+            return QString("mtDWG");
+        case uDWG:
+            return QString::fromUtf8("μtDWG");
         default:
             return QString("???");
         }
@@ -82,23 +82,23 @@ QString BitcoinUnits::description(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case DWE:
-            return QString("DWE");
-        case mDWE:
-            return QString("Milli-DWE (1 / 1" THIN_SP_UTF8 "000)");
-        case uDWE:
-            return QString("Micro-DWE (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case DWG:
+            return QString("DWG");
+        case mDWG:
+            return QString("Milli-DWG (1 / 1" THIN_SP_UTF8 "000)");
+        case uDWG:
+            return QString("Micro-DWG (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case DWE:
-            return QString("TestDWEs");
-        case mDWE:
-            return QString("Milli-TestDWE (1 / 1" THIN_SP_UTF8 "000)");
-        case uDWE:
-            return QString("Micro-TestDWE (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case DWG:
+            return QString("TestDWGs");
+        case mDWG:
+            return QString("Milli-TestDWG (1 / 1" THIN_SP_UTF8 "000)");
+        case uDWG:
+            return QString("Micro-TestDWG (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
@@ -108,11 +108,11 @@ QString BitcoinUnits::description(int unit)
 qint64 BitcoinUnits::factor(int unit)
 {
     switch (unit) {
-    case DWE:
+    case DWG:
         return 100000000;
-    case mDWE:
+    case mDWG:
         return 100000;
-    case uDWE:
+    case uDWG:
         return 100;
     default:
         return 100000000;
@@ -122,11 +122,11 @@ qint64 BitcoinUnits::factor(int unit)
 int BitcoinUnits::decimals(int unit)
 {
     switch (unit) {
-    case DWE:
+    case DWG:
         return 8;
-    case mDWE:
+    case mDWG:
         return 5;
-    case uDWE:
+    case uDWG:
         return 2;
     default:
         return 0;

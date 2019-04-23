@@ -10,7 +10,7 @@
  * @license    This project is released under the MIT license.
  **/
 
-// Copyright (c) 2018 The DWE developers
+// Copyright (c) 2018 The DWG developers
 #include <stdexcept>
 #include <iostream>
 #include "Coin.h"
