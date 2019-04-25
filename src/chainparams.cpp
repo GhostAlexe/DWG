@@ -169,6 +169,17 @@ public:
         assert(hashGenesisBlock == uint256("0x00000c861f7d38052429f70ea159badf1632c86c509e03e836021ff9291f12f2"));
         assert(genesis.hashMerkleRoot == uint256("0xab5e7ab2bd9eb360dff77444bfa13d84b3af33635cc63eca1490694cb0cd30dc"));
 
+        vSeeds.push_back(CDNSSeedData("46.101.221.202", "46.101.221.202"));
+        vSeeds.push_back(CDNSSeedData("46.101.221.64", "46.101.221.64"));
+        vSeeds.push_back(CDNSSeedData("46.101.221.65", "46.101.221.65"));
+        vSeeds.push_back(CDNSSeedData("46.101.216.93", "46.101.216.93"));
+        vSeeds.push_back(CDNSSeedData("46.101.216.94", "46.101.216.94"));
+        vSeeds.push_back(CDNSSeedData("46.101.216.225", "46.101.216.225"));
+        vSeeds.push_back(CDNSSeedData("46.101.215.170", "46.101.215.170"));
+        vSeeds.push_back(CDNSSeedData("46.101.215.245", "46.101.215.245"));
+        vSeeds.push_back(CDNSSeedData("46.101.219.234", "46.101.219.234"));
+        vSeeds.push_back(CDNSSeedData("46.101.221.239", "46.101.221.239"));
+
 //        vSeeds.push_back(CDNSSeedData("34.230.0.77", "34.230.0.77"));
 //        vSeeds.push_back(CDNSSeedData("18.212.49.49", "18.212.49.49"));
 //        vSeeds.push_back(CDNSSeedData("35.175.214.120", "35.175.214.120"));
