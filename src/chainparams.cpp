@@ -119,7 +119,7 @@ public:
         nMaxMoneyOut = 800000000000 * COIN;
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 300;
+        nLastPOWBlock = 1000000000;
         nModifierUpdateBlock = 615800;
         nZerocoinStartHeight = 600;
         nZerocoinStartTime = 1556712000; // May 1, 2019 12:00:00 PM GMT
